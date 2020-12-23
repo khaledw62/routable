@@ -1,0 +1,14 @@
+{
+    "name": "echosters/routable",
+    "description": "Laravel Eloquent Routable Models For Resources Models",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khaled Waleed",
+            "email": "khaledw62@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
