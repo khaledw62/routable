@@ -9,6 +9,15 @@ Using [composer](https://getcomposer.org/) to install routable.
 ```bash
 composer require echosters/routable
 ```
+## Configuration
+in your ```app\config.php```
+add in your ```providers```
+```php
+'providers' => [
+    ...,
+    App\Providers\RouteServiceProvider::class,
+];
+```
 ## Preparing your model
 ```php
 <?php
