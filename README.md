@@ -9,7 +9,20 @@ Using [composer](https://getcomposer.org/) to install routable.
 ```bash
 composer require echosters/routable
 ```
+## Preparing your model
+```php
+<?php
 
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Echosters\Routable\Routable;
+
+class YourModel extends Model
+{
+    use Routable;
+}
+```
 ## Usage
 
 ```php
