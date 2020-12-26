@@ -4,15 +4,24 @@
 namespace Echosters\Routable\Facades;
 
 
-class RoutableFacade
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Facade;
+/**
+ * @method static getModelRouteName(Model $model)
+ * @method static isBindableRoute(string $route)
+ * @method static hasFixedParameter(Model $model)
+ *
+ * @see \Echosters\Routable\RouteHelper
+ */
+class RoutableFacade extends Facade
 {
-    public static function __callStatic($method, $args)
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
     {
-        return (new self)::resolveFacade('RoutableFacade')->$method(...$args);
-    }
-
-    public static function resolveFacade($name)
-    {
-        return app()->make($name);
+        return 'routable';
     }
 }

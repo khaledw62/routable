@@ -26,6 +26,9 @@ trait Routable {
                 $params = [$this->id];
             }
 
+            //add fixed params to the parameters if exist
+            $parameters = RoutableFacade::hasFixedParameter($this);
+
             //Check if there are additional parameters to be passed
             if (count($parameters) > 0) {
                 $params = array_merge($params,$parameters);
