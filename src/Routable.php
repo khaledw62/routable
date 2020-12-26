@@ -1,7 +1,7 @@
 <?php
 
-namespace Echosters\Router;
-use Echosters\Router\Facades\RoutableFacade;
+namespace Echosters\Routable;
+use Echosters\Routable\Facades\RoutableFacade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 

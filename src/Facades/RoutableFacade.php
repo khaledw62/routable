@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Echosters\Router\Facades;
+namespace Echosters\Routable\Facades;
 
 
 class RoutableFacade

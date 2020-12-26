@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Echosters\Router;
+namespace Echosters\Routable;
 
 
 interface HasRouter
