@@ -15,18 +15,20 @@ trait Routable {
     */
     public function getRoutes($route = '' , $parameters = [])
     {
+        $routes = [];
         $routeName = RoutableFacade::getModelRouteName($this);
-        //Default Route Setting
-        $params = [];
         //All Possible Routes to this model this,So we'll Iterate over all possible route to deal with each separately
-        foreach (['edit','update','show','destroy','store'] as $routeIndex) {
+        foreach (['edit','update','show','destroy','store','index'] as $routeIndex) {
+            //Default Route Setting
+            $params = [];
             //Check if Desired Route is Bindable,if So ,We'll pass the id
-            $params = [$this->id];
+            if (RoutableFacade::isBindableRoute($routeIndex)) {
+                $params = [$this->id];
+            }
 
             //Check if there are additional parameters to be passed
             if (count($parameters) > 0) {
-                $params = array_merge([$this->id],$parameters);
-
+                $params = array_merge($params,$parameters);
             }
             //Generate the route then push it to the routes array
             if (Route::has($generatedRouteName = $routeName . '.' . $routeIndex)) {
