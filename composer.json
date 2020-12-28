@@ -1,7 +1,7 @@
 {
     "name": "echosters/routable",
     "description": "Laravel Eloquent Routable Models For Resources Models",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
