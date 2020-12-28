@@ -71,7 +71,7 @@ you can pass any additional params to any route by passing the the params as arr
 ```php
 User::find(1)->getRoute('show',['highlight' => 'true']); // "http://example.com/users/1?highlight=true"
 User::find(1)->getRoutes('show',['highlight' => 'false']); // "http://example.com/users/1?highlight=false"
-User::getResourceRoute('index',['id' => '1']); // "http://example.com/users/1?id=1"
+User::getResourceRoute('index',['id' => '1']); // "http://example.com/users?id=1"
 ```
 ## Notes
 ### Name Convention
