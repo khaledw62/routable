@@ -27,18 +27,19 @@ trait Routable {
             }
 
             //add fixed params to the parameters if exist
-            $parameters = RoutableFacade::hasFixedParameter($this);
+            $fixedParameters = RoutableFacade::hasFixedParameter($this);
+
+            //Merge Fixed Parameters
+            $parameters = array_merge($fixedParameters,$parameters);
 
             //Check if there are additional parameters to be passed
-            if (count($parameters) > 0) {
-                $params = array_merge($params,$parameters);
-            }
+            $params = array_merge($params,$parameters);
+
             //Generate the route then push it to the routes array
             if (Route::has($generatedRouteName = $routeName . '.' . $routeIndex)) {
                 $routes[$routeIndex] = route($generatedRouteName ,$params);
             }
         }
-
         return isset($routes[$route])
             ? $routes[$route]
             : $routes;
