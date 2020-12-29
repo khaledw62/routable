@@ -10,7 +10,7 @@ Using [composer](https://getcomposer.org/) to install routable.
 composer require echosters/routable
 ```
 ## Configuration
-in your ```app\config.php```
+in your ```config\app.php```
 add in your ```providers```
 ```php
 'providers' => [
