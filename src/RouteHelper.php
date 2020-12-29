@@ -42,4 +42,20 @@ class RouteHelper
         }
         return [];
     }
+
+    /**
+     * get All possible routes to a resources model
+     * @return array
+     */
+    public function getAllRoutes()
+    {
+        return [
+            'edit',
+            'update',
+            'show',
+            'destroy',
+            'store',
+            'index',
+        ];
+    }
 }

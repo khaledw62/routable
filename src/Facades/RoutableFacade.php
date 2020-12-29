@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static getModelRouteName(Model $model)
  * @method static isBindableRoute(string $route)
  * @method static hasFixedParameter(Model $model)
+ * @method static getAllRoutes()
  *
  * @see \Echosters\Routable\RouteHelper
  */

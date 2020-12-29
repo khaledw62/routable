@@ -17,8 +17,9 @@ trait Routable {
     {
         $routes = [];
         $routeName = RoutableFacade::getModelRouteName($this);
+
         //All Possible Routes to this model this,So we'll Iterate over all possible route to deal with each separately
-        foreach (['edit','update','show','destroy','store','index'] as $routeIndex) {
+        foreach (RoutableFacade::getAllRoutes() as $routeIndex) {
             //Default Route Setting
             $params = [];
             //Check if Desired Route is Bindable,if So ,We'll pass the id

@@ -103,6 +103,33 @@ if you are using locale paramaters just add them in your model as following
     $user = User::find(1);
     $user->getRoute('edit'); //will generate 'http://example.com/en/users/1'
 ```
+
+### Relations
+if you have a relation like below ```App\Models\Post.php```
+```php
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+```
+if Your web look like this
+```php
+ Route::resource('{user}/posts',PostsController::class);
+```
+
+So in Your ```App\Models\Post.php``` Model
+```php
+    public function getFixedParameter()
+    {
+        return [
+            'user' => $this->user->id,// Or $this->user,
+        ];
+    }
+    //Then 
+    $post = Post::find(1); // Known that $post->user->id = 22;
+    $post->getRoute('show'); //will generate 'http://example.com/22/posts/1'
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
