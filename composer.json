@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Echosters\\Translatable\\": "src"
+            "Echosters\\Routable\\": "src"
         }
     },
     "minimum-stability": "dev",
