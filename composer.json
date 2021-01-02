@@ -9,6 +9,11 @@
             "email": "khaledw62@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Echosters\\Translatable\\": "src"
+        }
+    },
     "minimum-stability": "dev",
     "require": {}
 }
