@@ -11,7 +11,7 @@ class RouteHelper
 {
     public function getModelRouteName(Model $model)
     {
-        $routeName = Str::slug(preg_replace('/([a-z])([A-Z])/s','$1 $2', Str::plural(class_basename($model))));
+        $routeName = Str::lower(Str::plural(class_basename($model)));
 
         if (method_exists($model,'getRouteName')) {
             $routeName = $model->getRouteName();
