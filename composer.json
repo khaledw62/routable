@@ -15,10 +15,11 @@
         }
     },
     "extra": {
-    "laravel": {
-        "providers": [
-            "Echosters\\Providers\\RoutableServiceProvider"
-        ]
+        "laravel": {
+            "providers": [
+                "Echosters\\Routable\\Providers\\RoutableServiceProvider"
+            ]
+        }
     },
     "minimum-stability": "dev",
     "require": {}

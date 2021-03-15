@@ -25,7 +25,7 @@ class RouteHelper
      * @param string $route
      * @return boolean
      */
-    public function isBindableRoute(string $route)
+    public function isBindableRoute($route)
     {
         return in_array($route,['edit','show','update','destroy']);
     }
