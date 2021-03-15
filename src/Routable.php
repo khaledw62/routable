@@ -24,7 +24,7 @@ trait Routable {
             $params = [];
             //Check if Desired Route is Bindable,if So ,We'll pass the id
             if (RoutableFacade::isBindableRoute($routeIndex)) {
-                $params = [$this->id];
+                $params = [$this->getRouteKeyName()];
             }
 
             //add fixed params to the parameters if exist
